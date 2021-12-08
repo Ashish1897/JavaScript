@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript do while statement</title>
+</head>
+<body>
+    <script lang="javascript">
+
+        // generate a secret number between 1 to 12
+        const MIN = 1;
+        const MAX = 12;
+
+        let secretNumber = Math.floor(Math.random()*(MAX-MIN + 1)) + MIN;
+        document.writeln(Math.random()); // randomly returns a valur greater than 0 and less  than 1
+        let guesses = 0; // for storing the number of guesses
+        let hint = ''; // for storing the hint
+        let number = 0;
+
+        do{
+            // get input from user
+            let input = prompt(`Please enter a number between ${MIN} and ${MAX}` + hint);
+            
+            // get the integer
+            number = parseInt(input);
+
+            // increase the number of guesses
+            guesses++;
+            //check input number with the secret number
+            // provided hint if needed
+
+            if(number>secretNumber){
+                hint = ', and less than' + number;
+            } else if( number < secretNumber){
+                hint =', and greater than '+ number;
+            }
+            else if(number == secretNumber){
+                alert(`Bravo! you are correct after ${guesses} guess(es).`);
+            }
+        }
+        while(number!=secretNumber)
+
+        </script>
+    
+</body>
+</html>

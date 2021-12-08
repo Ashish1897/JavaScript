@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/* to center the table*/
+    table{
+        margin-left: auto;
+        margin-left: auto;
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+    <tr>
+        <td>Select Your Color</td>
+        <td>
+            <input type="color"name="favcolor" tabindex="13">
+        </td>
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        <td>
+            <input type="date" name="dob" id="dob" tabindex="14">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Meeting date and Time</td>
+        <td>
+            <input type="datetime-local" name="meeting" id="meeting"
+            tabindex="15">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Email  Addresss</td>
+        <td>
+            <input type="email" name="email"
+            tabindex="16" required>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Website</td>
+        <td>
+            <input type="url" name="website" id="website"
+            tabindex="17" required>
+        </td>
+    </tr>
+    <tr>
+        <td>Contact Number</td>
+        <td>
+            <input type="tel" name="contact" id="contact"
+            tabindex="18"
+            pattern="[0-9]{4}-[0-9]{6}" required>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <input type="subnit" value="Register Me">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+</form>
+</body>
+</html>
